@@ -13,4 +13,4 @@ DIRETORIO_PRODUCAO = "home/usuario/www"
 Depois coloque o arquivo <strong>post-receive</strong> dentro da pasta hooks de seu repositório <strong>BARE</strong> e via terminal dê a seguite permissão:
 <strong>chmod +x</strong> .
 
-pronto pasta dar <strong>push</strong> :D. 
+pronto basta dar <strong>PUSH</strong> :D. 
