@@ -10,16 +10,15 @@ EMAIL=$(printf '%s\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
 Please commit under your own name and email instead of "${NAME} <${EMAIL}>":
 GIT_AUTHOR_NAME="Your Name" GIT_AUTHOR_EMAIL="your@email.com" git commit
 EOF
-    exit 1
+	exit 1
 }
-
 echo "***************************************"
 echo "*                                    **"
-echo "* Seven Soluções                     **"
+echo "*            Deploy Git              **"
 echo "*                                    **"
 echo "***************************************"
 echo "***************************************"
-echo "*           Deploy Git               **"
+echo "*            Deploy Git              **"
 echo "***************************************"
 echo "***************************************"
 echo "***************************************"
@@ -33,25 +32,17 @@ echo "***************************************"
 
 while read oldrev newrev ref
 do
-    branch=`echo $ref | cut -d/ -f3`
+	branch=`echo $ref | cut -d/ -f3`
 
-    if [ "$branch" ] ; then
-        cd $DIRETORIO_PRODUCAO
-        #env -i git checkout $branch
-        env -i git pull origin $branch
-        #env -i git reset --hard
-
-#        EMAIL="jacksonbicalho@gmail.com"
-#        BODY="$BODY $branch."
-
-#       echo "$BODY" | mail -s "$SUBJECT" "$EMAIL"
-
-      echo "***************************************"
-      echo "**                                   **"
-      echo "**                                   **"
-      echo "**    Branch $branch atualizado!   **"
-      echo "**                                   **"
-      echo "**                                   **"
-      echo "***************************************"
-    fi
+	if [ "$branch" ] ; then
+		cd $DIRETORIO_PRODUCAO
+		env -i git pull origin $branch
+		echo "***************************************"
+		echo "**                                   **"
+		echo "**                                   **"
+		echo "**    Branch $branch atualizado!   **"
+		echo "**                                   **"
+		echo "**                                   **"
+		echo "***************************************"
+	fi
 done
