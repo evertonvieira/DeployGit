@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DIRETORIO_PRODUCAO='/home/potencial/www'
+DIRETORIO_PRODUCAO='/home/usuario/www'
 
 #!/bin/sh
 AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
