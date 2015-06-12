@@ -10,7 +10,7 @@ Alterado o enderço da raiz de produção no arquivo <strong>post-receive</stron
 DIRETORIO_PRODUCAO = "home/usuario/www"
 <br />
 
-Depois colocar o arquivo <strong>post-receive</strong> dentro da pasta hooks de seu repositório BARE e via terminal dar seguite permissão:
+Depois coloque o arquivo <strong>post-receive</strong> dentro da pasta hooks de seu repositório <strong>BARE</strong> e via terminal dê a seguite permissão:
 <strong>chmod +x</strong> .
 
-pronto pasta dar push :D 
+pronto pasta dar <strong>push</strong> :D. 
