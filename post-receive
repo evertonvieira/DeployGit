@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+DIRETORIO_PRODUCAO='/home/potencial/www'
+
+#!/bin/sh
+AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
+NAME=$(printf '%s\n' "${AUTHORINFO}" | sed -n 's/^\(.*\) <.*$/\1/p')
+EMAIL=$(printf '%s\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
+[ "${NAME}" != root ] && [ "${EMAIL}" != "root@localhost" ] || {
+    cat <<EOF >&2
+Please commit under your own name and email instead of "${NAME} <${EMAIL}>":
+GIT_AUTHOR_NAME="Your Name" GIT_AUTHOR_EMAIL="your@email.com" git commit
+EOF
+    exit 1
+}
+
+echo "***************************************"
+echo "*                                    **"
+echo "* Seven Soluções                     **"
+echo "*                                    **"
+echo "***************************************"
+echo "***************************************"
+echo "*           Deploy Git               **"
+echo "***************************************"
+echo "***************************************"
+echo "***************************************"
+echo "**                                   **"
+echo "**    Olá $NAME                      **"
+echo "**                                   **"
+echo "***************************************"
+
+#SUBJECT="Deploy successful"
+#BODY="You've successfully deployed the branch:"
+
+while read oldrev newrev ref
+do
+    branch=`echo $ref | cut -d/ -f3`
+
+    if [ "$branch" ] ; then
+        cd $DIRETORIO_PRODUCAO
+        #env -i git checkout $branch
+        env -i git pull origin $branch
+        #env -i git reset --hard
+
+#        EMAIL="jacksonbicalho@gmail.com"
+#        BODY="$BODY $branch."
+
+#       echo "$BODY" | mail -s "$SUBJECT" "$EMAIL"
+
+      echo "***************************************"
+      echo "**                                   **"
+      echo "**                                   **"
+      echo "**    Branch $branch atualizado!   **"
+      echo "**                                   **"
+      echo "**                                   **"
+      echo "***************************************"
+    fi
+done
