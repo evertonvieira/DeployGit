@@ -6,7 +6,7 @@ git config --global user.name "Seu Nome" <br />
 git config --global user.email "seuemail@example.com"
 <br />	
 
-Alterado o enderço da raiz de produção no arquivo <strong>post-receive</strong>:<br />	
+Altere o enderço da raiz de produção no arquivo <strong>post-receive</strong>:<br />	
 DIRETORIO_PRODUCAO = "home/usuario/www"
 <br />
 
