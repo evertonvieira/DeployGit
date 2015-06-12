@@ -14,7 +14,7 @@ Altere o enderço da raiz de produção no arquivo <strong>post-receive</strong>
 DIRETORIO_PRODUCAO = "home/usuario/www"
 ```
 
-Depois coloque o arquivo <strong>post-receive</strong> dentro da pasta hooks de seu repositório <strong>BARE</strong> e via terminal dê a seguite permissão:
+Depois coloque o arquivo <strong>post-receive</strong> dentro da pasta hooks de seu repositório <strong>bare</strong> e via terminal dê a seguite permissão:
 ```bash
 chmod +x
 ```
