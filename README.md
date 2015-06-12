@@ -18,4 +18,4 @@ Depois coloque o arquivo <strong>post-receive</strong> dentro da pasta hooks de 
 ```bash
 chmod +x
 ```
-pronto basta dar <strong>PUSH</strong> :D. 
+pronto basta dar <strong>push</strong> :D. 
