@@ -3,7 +3,7 @@
 
 Para que não haja a necessidade de se logar no servidor de produção (**POR SSH**) toda vez que houver uma nova alteração, esse script foi criado com o intuíto de realizar esta tarefa automática. Toda vez que houver um **push** no repositório **bare**, o script se encarrega de jogar para a raiz do servidor (**projeto online**) o **commit** enviado. 
 
-A primeira coisa que deve ser feita no servidor de produção é definir o seu **nome de usuário** e **endereço de e-mail** (caso não tenha definido antes):
+A primeira coisa que deve ser feita no servidor de produção, é definir o seu **nome de usuário** e **endereço de e-mail** (caso não tenha definido antes):
 
 ```bash
 git config --global user.name "Seu Nome"
